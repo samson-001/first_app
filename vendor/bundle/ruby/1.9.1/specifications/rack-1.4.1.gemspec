@@ -1,22 +1,29 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "rack"
+  s.name = %q{rack}
   s.version = "1.4.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Christian Neukirchen"]
-  s.date = "2012-01-23"
-  s.description = "Rack provides a minimal, modular and adaptable interface for developing\nweb applications in Ruby.  By wrapping HTTP requests and responses in\nthe simplest way possible, it unifies and distills the API for web\nservers, web frameworks, and software in between (the so-called\nmiddleware) into a single method call.\n\nAlso see http://rack.rubyforge.org.\n"
-  s.email = "chneukirchen@gmail.com"
-  s.executables = ["rackup"]
-  s.extra_rdoc_files = ["README.rdoc", "KNOWN-ISSUES"]
-  s.files = ["bin/rackup", "README.rdoc", "KNOWN-ISSUES"]
-  s.homepage = "http://rack.rubyforge.org"
-  s.require_paths = ["lib"]
-  s.rubyforge_project = "rack"
-  s.rubygems_version = "1.8.24"
-  s.summary = "a modular Ruby webserver interface"
+  s.authors = [%q{Christian Neukirchen}]
+  s.date = %q{2012-01-23}
+  s.description = %q{Rack provides a minimal, modular and adaptable interface for developing
+web applications in Ruby.  By wrapping HTTP requests and responses in
+the simplest way possible, it unifies and distills the API for web
+servers, web frameworks, and software in between (the so-called
+middleware) into a single method call.
+
+Also see http://rack.rubyforge.org.
+}
+  s.email = %q{chneukirchen@gmail.com}
+  s.executables = [%q{rackup}]
+  s.extra_rdoc_files = [%q{README.rdoc}, %q{KNOWN-ISSUES}]
+  s.files = [%q{bin/rackup}, %q{README.rdoc}, %q{KNOWN-ISSUES}]
+  s.homepage = %q{http://rack.rubyforge.org}
+  s.require_paths = [%q{lib}]
+  s.rubyforge_project = %q{rack}
+  s.rubygems_version = %q{1.8.5}
+  s.summary = %q{a modular Ruby webserver interface}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

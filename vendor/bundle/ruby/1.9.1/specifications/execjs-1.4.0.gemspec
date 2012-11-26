@@ -1,18 +1,18 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "execjs"
+  s.name = %q{execjs}
   s.version = "1.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Sam Stephenson", "Josh Peek"]
-  s.date = "2012-05-20"
-  s.description = "ExecJS lets you run JavaScript code from Ruby."
-  s.email = ["sstephenson@gmail.com", "josh@joshpeek.com"]
-  s.homepage = "https://github.com/sstephenson/execjs"
-  s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
-  s.summary = "Run JavaScript code from Ruby"
+  s.authors = [%q{Sam Stephenson}, %q{Josh Peek}]
+  s.date = %q{2012-05-20}
+  s.description = %q{ExecJS lets you run JavaScript code from Ruby.}
+  s.email = [%q{sstephenson@gmail.com}, %q{josh@joshpeek.com}]
+  s.homepage = %q{https://github.com/sstephenson/execjs}
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.5}
+  s.summary = %q{Run JavaScript code from Ruby}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

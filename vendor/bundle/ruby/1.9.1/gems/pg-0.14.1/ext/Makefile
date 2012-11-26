@@ -12,11 +12,11 @@ ECHO = $(ECHO1:0=@echo)
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /home/sss/.rvm/rubies/ruby-1.9.3-p286/include/ruby-1.9.1
-hdrdir = /home/sss/.rvm/rubies/ruby-1.9.3-p286/include/ruby-1.9.1
-arch_hdrdir = /home/sss/.rvm/rubies/ruby-1.9.3-p286/include/ruby-1.9.1/$(arch)
+topdir = /usr/local/include/ruby-1.9.1
+hdrdir = /usr/local/include/ruby-1.9.1
+arch_hdrdir = /usr/local/include/ruby-1.9.1/$(arch)
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/home/sss/.rvm/rubies/ruby-1.9.3-p286
+prefix = $(DESTDIR)/usr/local
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
 exec_prefix = $(prefix)
 vendorhdrdir = $(rubyhdrdir)/vendor_ruby
@@ -38,7 +38,7 @@ oldincludedir = $(DESTDIR)/usr/include
 includedir = $(prefix)/include
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
-sysconfdir = $(DESTDIR)/etc
+sysconfdir = $(prefix)/etc
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -55,25 +55,24 @@ NULLCMD = :
 
 CC = gcc
 CXX = g++
-LIBRUBY = $(LIBRUBY_SO)
+LIBRUBY = $(LIBRUBY_A)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = '-Wl,-rpath,$${ORIGIN}/../lib' -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
-LIBRUBYARG_STATIC = '-Wl,-rpath,$${ORIGIN}/../lib' -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static
-empty =
-OUTFLAG = -o $(empty)
-COUTFLAG = -o $(empty)
+LIBRUBYARG_SHARED = -Wl,-R -Wl,$(libdir) -L$(libdir) 
+LIBRUBYARG_STATIC = -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static
+OUTFLAG = -o 
+COUTFLAG = -o 
 
 RUBY_EXTCONF_H = extconf.h
 cflags   =  $(optflags) $(debugflags) $(warnflags)
 optflags = -O3
 debugflags = -ggdb
-warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration
-CFLAGS   = -fPIC -I$(prefix)/include -fPIC $(ARCH_FLAG)
+warnflags = -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration
+CFLAGS   = -fPIC $(cflags) $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = -D_FILE_OFFSET_BITS=64
 CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\"  $(DEFS) $(cppflags) -I/usr/include/postgresql
 CXXFLAGS = $(CFLAGS) $(cxxflags)
-ldflags  = -L. -L$(prefix)/lib -rdynamic -Wl,-export-dynamic -L/usr/lib
+ldflags  = -L.  -rdynamic -Wl,-export-dynamic -L/usr/lib
 dldflags = 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
@@ -88,7 +87,7 @@ RUBY_SO_NAME = ruby
 arch = i686-linux
 sitearch = $(arch)
 ruby_version = 1.9.1
-ruby = /home/sss/.rvm/rubies/ruby-1.9.3-p286/bin/ruby
+ruby = /usr/local/bin/ruby
 RUBY = $(ruby)
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
@@ -115,7 +114,7 @@ extout =
 extout_prefix = 
 target_prefix = 
 LOCAL_LIBS = 
-LIBS = $(LIBRUBYARG_SHARED) -lpq  -lpthread -lrt -ldl -lcrypt -lm   -lc
+LIBS =  -lpq  -lpthread -lrt -ldl -lcrypt -lm   -lc
 SRCS = pg.c pg_connection.c pg_result.c
 OBJS = pg.o pg_connection.o pg_result.o
 TARGET = pg_ext

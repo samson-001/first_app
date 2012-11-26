@@ -1,20 +1,20 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "mail"
+  s.name = %q{mail}
   s.version = "2.4.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Mikel Lindsaar"]
-  s.date = "2012-03-14"
-  s.description = "A really Ruby Mail handler."
-  s.email = "raasdnil@gmail.com"
-  s.extra_rdoc_files = ["README.md", "CONTRIBUTING.md", "CHANGELOG.rdoc", "TODO.rdoc"]
-  s.files = ["README.md", "CONTRIBUTING.md", "CHANGELOG.rdoc", "TODO.rdoc"]
-  s.homepage = "http://github.com/mikel/mail"
-  s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
-  s.summary = "Mail provides a nice Ruby DSL for making, sending and reading emails."
+  s.authors = [%q{Mikel Lindsaar}]
+  s.date = %q{2012-03-14}
+  s.description = %q{A really Ruby Mail handler.}
+  s.email = %q{raasdnil@gmail.com}
+  s.extra_rdoc_files = [%q{README.md}, %q{CONTRIBUTING.md}, %q{CHANGELOG.rdoc}, %q{TODO.rdoc}]
+  s.files = [%q{README.md}, %q{CONTRIBUTING.md}, %q{CHANGELOG.rdoc}, %q{TODO.rdoc}]
+  s.homepage = %q{http://github.com/mikel/mail}
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.5}
+  s.summary = %q{Mail provides a nice Ruby DSL for making, sending and reading emails.}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

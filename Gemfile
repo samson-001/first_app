@@ -8,13 +8,13 @@ gem 'rails', '3.2.8'
 
 #gem 'sqlite3'
 
-group :production do 
+#group :production do 
   gem 'pg' 
-end 
+#end 
 
-group :development, :test do 
+#group :development, :test do 
   gem 'sqlite3' , '1.3.6'
-end 
+#end 
 
 
 gem 'json'

@@ -1,19 +1,19 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "coffee-rails"
+  s.name = %q{coffee-rails}
   s.version = "3.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Santiago Pastorino"]
-  s.date = "2012-01-26"
-  s.description = "Coffee Script adapter for the Rails asset pipeline."
-  s.email = ["santiago@wyeworks.com"]
-  s.homepage = ""
-  s.require_paths = ["lib"]
-  s.rubyforge_project = "coffee-rails"
-  s.rubygems_version = "1.8.24"
-  s.summary = "Coffee Script adapter for the Rails asset pipeline."
+  s.authors = [%q{Santiago Pastorino}]
+  s.date = %q{2012-01-26}
+  s.description = %q{Coffee Script adapter for the Rails asset pipeline.}
+  s.email = [%q{santiago@wyeworks.com}]
+  s.homepage = %q{}
+  s.require_paths = [%q{lib}]
+  s.rubyforge_project = %q{coffee-rails}
+  s.rubygems_version = %q{1.8.5}
+  s.summary = %q{Coffee Script adapter for the Rails asset pipeline.}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

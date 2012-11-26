@@ -1,19 +1,19 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "sass-rails"
+  s.name = %q{sass-rails}
   s.version = "3.2.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["wycats", "chriseppstein"]
-  s.date = "2012-03-19"
-  s.description = "Sass adapter for the Rails asset pipeline."
-  s.email = ["wycats@gmail.com", "chris@eppsteins.net"]
-  s.homepage = ""
-  s.require_paths = ["lib"]
-  s.rubyforge_project = "sass-rails"
-  s.rubygems_version = "1.8.24"
-  s.summary = "Sass adapter for the Rails asset pipeline."
+  s.authors = [%q{wycats}, %q{chriseppstein}]
+  s.date = %q{2012-03-19}
+  s.description = %q{Sass adapter for the Rails asset pipeline.}
+  s.email = [%q{wycats@gmail.com}, %q{chris@eppsteins.net}]
+  s.homepage = %q{}
+  s.require_paths = [%q{lib}]
+  s.rubyforge_project = %q{sass-rails}
+  s.rubygems_version = %q{1.8.5}
+  s.summary = %q{Sass adapter for the Rails asset pipeline.}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
